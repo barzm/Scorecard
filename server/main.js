@@ -21,6 +21,7 @@ app.get('/',function(req,res,next){
 app.get('/vendors',function(req,res,next){
 	res.sendFile(path.join(__dirname,'vendors.json')); 
 }); 
-app.listen(3000,function(){
+var PORT = process.env.port || 1337; 
+app.listen(PORT,function(){
 	console.log(chalk.blue("Listening on port 3000")); 
 });
