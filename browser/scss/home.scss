@@ -1,0 +1,38 @@
+#home{
+	h1{
+		font-weight:400; 
+	}
+	table{
+
+		margin-top:3%; 
+		#table-heading:hover{
+			background-color:white; 
+		}
+		tr{
+			font-weight:300; 	
+			th, td{
+				padding-left:2%;
+				padding-right:2%; 
+			}
+			th{
+				vertical-align:bottom;
+				text-align:center;
+				border:none; 
+				color:$grey-heading; 
+				font-weight:400; 
+				&:hover{
+					cursor:pointer; 
+				}
+				.secret{
+					visibility:hidden; 
+				}
+				#sort-icon{
+					display:inline; 
+				}
+			}
+			td{
+				font-size:1.5em;
+			}
+		}
+	}
+}

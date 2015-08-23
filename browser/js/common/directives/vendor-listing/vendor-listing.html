@@ -1,0 +1,6 @@
+<td><input ng-click="toggleChecked()" id="box{{idx}}" ng-checked="isChecked" type="checkbox"><label for="box{{idx}}"></label></td>
+<td class="{{info.score}} text-center">{{info.score}}</td>
+<td class="text-center">{{info.percentile | decToPercent}}</td>
+<td ng-class="{positive: info.change>0, negative:info.change<0,neutral:info.change==0}" class="text-center">{{info.change|percentageChange}}</td>
+<td>{{info.name}}</td>
+<td>{{info.industry}}</td>

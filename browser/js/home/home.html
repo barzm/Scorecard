@@ -1,0 +1,15 @@
+<section id="home">
+	<div class="row state_heading">
+		<div class="col-md-12">
+			<h1>Your Vendors</h1>
+		</div>
+	</div>
+	<div class="row">
+		<table class="table table-hover">
+			<tr id="table-heading">
+				<th ng-repeat="heading in vendorHeadings" ng-click=setOrderBy(heading)><span id="sort-icon" ng-class="{'secret':heading!==orderByUnfiltered}" class="glyphicon glyphicon-menu-down"></span>{{heading | uppercase}}</th>
+			</tr>
+			<tr vendor-listing ng-repeat="listing in vendors | orderBy: orderByCol" ischecked=isChecked info=listing idx=$index ng-class="{'selected':isChecked}"></tr>
+		</table>
+	</div>
+</section>

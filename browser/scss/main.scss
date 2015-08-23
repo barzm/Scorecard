@@ -1,0 +1,52 @@
+@import 'variables';
+* {
+	box-sizing: border-box;
+}
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+p, h1, h2, h3, h4, td, th {
+	color:$steel; 
+}
+input[type="checkbox"]{
+	display:none;
+}
+
+input[type="checkbox"] + label{
+	display:inline-block;
+	height:18px;
+	width:18px;
+	vertical-align:middle;
+	background:url(img/checkbox.png) left top no-repeat;
+	background-size:36px 18px; 
+	cursor:pointer; 
+}
+@-moz-document url-prefix() { 
+	input[type="checkbox"] + label{
+		height:20px;
+		width:40.5px;
+		
+	}
+	@media(max-width:1199px){
+		input[type="checkbox"] + label{
+			width:43px;
+		}
+	}
+	@media(max-width:990px){
+		input[type="checkbox"] + label{
+			width:47px;
+		}
+	}
+
+}
+input[type="checkbox"]:checked + label {
+	background:url(img/checkbox.png) -18px top no-repeat;
+	background-size:36px 18px; 
+}
+@import 'directives/navbar';
+@import 'home';
+@import 'directives/vendor-listing';
