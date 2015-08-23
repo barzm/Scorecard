@@ -4,7 +4,7 @@
   "description": "Front End Coding Challenge",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch server -e js,html server/main.js"
+    "start": "node server/main.js"
   },
   "dependencies": {
     "angular": "^1.4.0",
