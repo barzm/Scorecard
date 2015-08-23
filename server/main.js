@@ -23,5 +23,5 @@ app.get('/vendors',function(req,res,next){
 }); 
 var PORT = process.env.port || 1337; 
 app.listen(PORT,function(){
-	console.log(chalk.blue("Listening on port 3000")); 
+	console.log(chalk.blue("Listening on port ",PORT)); 
 });
