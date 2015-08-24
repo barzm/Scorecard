@@ -1,7 +1,19 @@
-S.S. Front End Challenge
+Scorecard Front End Challenge
 ===================
 
 ### [Deployed Application](https://afternoon-springs-2530.herokuapp.com/)
+
+Running Locally
+-----------
+
+To run the application locally, simply clone the repository and run: 
+
+```$ npm install```
+
+```$ gulp build```
+
+```$ npm start``` 
+
 
 Tools & Frameworks Used
 -------------------
@@ -32,7 +44,7 @@ All client-side files can be found in the ```./browser``` directory.
 [Nodemon](http://nodemon.io/) - Used for immediate server reloading when changes occur.
 
 
-### Compatibility
+## Compatibility
 
 This has been tested in the most recent versions of Chrome, Firefox and Safari. For the time being, I do not have access to a machine running Internet Explorer, or a Litmus account. 
 
