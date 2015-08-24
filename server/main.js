@@ -16,6 +16,7 @@ app.use(express.static(browserPath));
 
 //routes
 app.get('/',function(req,res,next){
+	console.log('publicPath ',publicPath); 
 	res.sendFile(path.join(__dirname,'index.html'));
 }); 
 app.get('/vendors',function(req,res,next){
