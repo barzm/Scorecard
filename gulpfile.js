@@ -68,7 +68,7 @@ gulp.task('buildJSProduction', function () {
     return gulp.src(['./browser/js/app.js', './browser/js/**/*.js'])
         .pipe(concat('main.js'))
         .pipe(babel())
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('./public'));
 });
 
@@ -78,7 +78,13 @@ gulp.task('buildProduction', ['buildCSSProduction', 'buildJSProduction']);
 // Composed tasks
 // --------------------------------------------------------------
 
-gulp.task('build', ['buildJS','buildCSS']); 
+gulp.task('build', function () {
+    if (process.env.NODE_ENV === 'production') {
+        runSeq(['buildJSProduction', 'buildCSSProduction']);
+    } else {
+        runSeq(['buildJS', 'buildCSS']);
+    }
+});
 
 gulp.task('default', function () {
 
