@@ -4,7 +4,13 @@ app.config(function ($stateProvider) {
 		templateUrl: 'js/home/home.html',
 		resolve:{
 			vendors: function(Vendors){
-				return Vendors.getVendors(); 
+				console.log('getting vendors');
+				return Vendors.getVendors().then(function(vend){
+					vend.forEach(function(row){
+						row.change = parseInt(row.change); 
+					})
+					return vend; 
+				})
 			},
 			headings:function(Vendors){
 				return Vendors.vendorHeadings(); 
@@ -23,17 +29,17 @@ app.controller('HomeCtrl', function($scope, vendors, headings){
 		$scope.orderByUnfiltered=col; 
 		switch(col.toLowerCase()){
 			case "30-day":
-				$scope.orderByCol="-change";
-				break; 
+			$scope.orderByCol="-change";
+			break; 
 			case "vendor":
-				$scope.orderByCol="name";
-				break;
+			$scope.orderByCol="name";
+			break;
 			case "percentile":
-				$scope.orderByCol="-"+col.toLowerCase()
-				break; 
+			$scope.orderByCol="-"+col.toLowerCase()
+			break; 
 			default:
-				$scope.orderByCol=col.toLowerCase(); 
-				break; 
+			$scope.orderByCol=col.toLowerCase(); 
+			break; 
 		}
 	};
 });
