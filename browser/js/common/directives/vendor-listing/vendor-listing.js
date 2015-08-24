@@ -8,7 +8,6 @@ app.directive('vendorListing', function($rootScope){
 		},
 		templateUrl: 'js/common/directives/vendor-listing/vendor-listing.html',
 		link: function(scope, elem, attr) {
-			console.log(elem); 
 			scope.isChecked=false;
 			scope.tellIsChecked=function(bool){
 				$rootScope.$broadcast('selectedNew');

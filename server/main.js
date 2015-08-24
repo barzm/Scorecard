@@ -1,12 +1,8 @@
 var express = require('express');
 var app = express(); 
 var chalk = require('chalk'); 
-var bodyParser = require('body-parser'); 
 var path = require('path'); 
 
-//middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 var npmPath = path.join(__dirname, '../node_modules');
 var publicPath = path.join(__dirname, '../public');
 var browserPath = path.join(__dirname, '../browser');
