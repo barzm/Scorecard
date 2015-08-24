@@ -1,7 +1,7 @@
 S.S. Front End Challenge
 ===================
 
-[Deployed Application](https://afternoon-springs-2530.herokuapp.com/)
+### [Deployed Application](https://afternoon-springs-2530.herokuapp.com/)
 
 Tools & Frameworks Used
 -------------------
