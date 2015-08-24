@@ -32,6 +32,10 @@ All client-side files can be found in the ```./browser``` directory.
 [Nodemon](http://nodemon.io/) - Used for immediate server reloading when changes occur.
 
 
+### Compatibility
+
+This has been tested in the most recent versions of Chrome, Firefox and Safari. For the time being, I do not have access to a machine running Internet Explorer, or a Litmus account. 
+
 ## Thank you
 
 Thanks again for your time. Please don't hesitate to reach out to me with any questions that you may have. 
